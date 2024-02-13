@@ -52,12 +52,13 @@ export default {
       default: ''
     }
   },
-  data() {
-    this.onlyOneChild = null
-    return {}
+  data () {
+    return {
+      onlyOneChild: null
+    }
   },
   methods: {
-    hasOneShowingChild(children = [], parent) {
+    hasOneShowingChild (children = [], parent) {
       if (!children) {
         children = []
       }
@@ -84,7 +85,7 @@ export default {
 
       return false
     },
-    resolvePath(routePath, routeQuery) {
+    resolvePath (routePath, routeQuery) {
       if (isExternal(routePath)) {
         return routePath
       }
